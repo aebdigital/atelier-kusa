@@ -1,0 +1,18 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-montserrat)', 'sans-serif'],
+      },
+      colors: {
+        // Add custom colors here if needed to match the screenshots
+      }
+    },
+  },
+  plugins: [],
+}
