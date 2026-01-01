@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import ProjectGallery from "../../components/ProjectGallery";
 
 // Generate static params for all projects
@@ -22,6 +23,42 @@ function getProject(slug: string) {
   return projects.find((p: any) => p.slug === slug);
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = getProject(params.slug);
+
+  if (!project) {
+    return {
+      title: 'Projekt nenájdený',
+    };
+  }
+
+  const title = `${project.title} | Atelier Kusa`;
+  const description = `Architektonický projekt ${project.title} od Atelier Kusa. Pozrite si detaily a galériu tohto projektu.`;
+  const image = project.thumbnail || (project.images && project.images[0]) || '/logo.jpg';
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          alt: project.title,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
 export default function ProjectDetail({ params }: { params: { slug: string } }) {
   const project = getProject(params.slug);
 
@@ -29,8 +66,25 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    "name": project.title,
+    "artist": {
+      "@type": "Organization",
+      "name": "Atelier Kusa"
+    },
+    "image": project.thumbnail ? `https://atelierkusa.sk${project.thumbnail}` : undefined,
+    "description": `Architektonický projekt ${project.title}.`,
+    "material": "Architektúra"
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="p-4 md:p-6">
         <Link href="/projects" className="text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-4 block">
           ← Späť na projekty
