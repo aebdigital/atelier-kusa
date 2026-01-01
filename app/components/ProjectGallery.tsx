@@ -120,7 +120,27 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-[5px] p-[5px]">
+      {/* Mobile: simple vertical stack with full-width images */}
+      <div className="md:hidden flex flex-col gap-[5px] p-[5px]">
+        {images.map((img: string, index: number) => (
+          <div
+            key={index}
+            className="relative cursor-pointer overflow-hidden group"
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={img}
+              alt={`${title} ${index + 1}`}
+              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: grid layout */}
+      <div className="hidden md:grid md:grid-cols-4 gap-[5px] p-[5px]">
         {images.map((img: string, index: number) => {
           const gridStyle = getGridStyle(index);
 

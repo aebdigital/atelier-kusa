@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes
   const routes = [
     '',
-    '/projects',
+    '/projekty',
     '/kontakt',
     '/ochrana-osobnych-udajov',
   ].map((route) => ({
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const projects = JSON.parse(jsonData);
 
     projectRoutes = projects.map((project: any) => ({
-      url: `${baseUrl}/projects/${project.slug}`,
+      url: `${baseUrl}/projekty/${project.slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

@@ -17,7 +17,7 @@ export default function Projects() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[5px]">
         {projects.map((project: any) => (
-          <Link href={`/projects/${project.slug}`} key={project.slug} className="group block">
+          <Link href={`/projekty/${project.slug}`} key={project.slug} className="group block">
             <div className="relative aspect-square overflow-hidden bg-gray-100">
                {project.thumbnail ? (
                 <img

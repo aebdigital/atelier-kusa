@@ -86,7 +86,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="p-4 md:p-6">
-        <Link href="/projects" className="text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-4 block">
+        <Link href="/projekty" className="text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-4 block">
           ← Späť na projekty
         </Link>
         <h1 className="text-3xl md:text-4xl font-light uppercase tracking-wide mb-6">{project.title}</h1>

@@ -74,7 +74,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href="/projects"
+                href="/projekty"
                 className="hover:text-gray-500 transition-colors block"
                 onClick={closeMenu}
               >
@@ -132,11 +132,11 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/projects" 
+              <Link
+                href="/projekty"
                 className={`block hover:text-gray-500 transition-all duration-300 ${
-                  pathname.startsWith("/projects") 
-                    ? "border-l-2 border-black pl-3" 
+                  pathname.startsWith("/projekty")
+                    ? "border-l-2 border-black pl-3"
                     : ""
                 }`}
               >
@@ -161,7 +161,7 @@ export default function Sidebar() {
         <div className="text-xs text-gray-400 mt-auto">
           <p>&copy; {new Date().getFullYear()} Ateliér Kusá</p>
           <a href="https://aebdigital.sk" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors block mt-1">
-            Tvorba web - AEB Digital
+            Tvorba webu - AEB Digital
           </a>
           <button 
              onClick={openSettings}

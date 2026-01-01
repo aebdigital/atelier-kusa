@@ -10,7 +10,7 @@ export default function MobileFooter() {
        <div className="text-[10px] text-gray-400">
          <p>&copy; {new Date().getFullYear()} Ateliér Kusá</p>
          <a href="https://aebdigital.sk" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors block mt-0.5">
-            Tvorba web - AEB Digital
+            Tvorba webu - AEB Digital
           </a>
        </div>
        

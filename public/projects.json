@@ -1,7 +1,7 @@
 [
   {
     "title": "Nedbalka",
-    "slug": "Nedbalka",
+    "slug": "nedbalka",
     "images": [
       "/projects/Nedbalka/00_G8C1306-scaled.jpg",
       "/projects/Nedbalka/01_G8C1106_new-scaled.jpg",
@@ -20,7 +20,7 @@
   },
   {
     "title": "Rodinný dom Lozorno",
-    "slug": "Rodinn__dom_Lozorno",
+    "slug": "rodinny-dom-lozorno",
     "images": [
       "/projects/Rodinn__dom_Lozorno/1.jpg",
       "/projects/Rodinn__dom_Lozorno/PHOTO-2025-02-28-00-30-37.jpg",
@@ -38,7 +38,7 @@
   },
   {
     "title": "Rodinné domy Rača",
-    "slug": "Rodinn__domy_Ra_a",
+    "slug": "rodinne-domy-raca",
     "images": [
       "/projects/Rodinn__domy_Ra_a/1.jpg",
       "/projects/Rodinn__domy_Ra_a/CISTINKY1.jpg",
@@ -50,7 +50,7 @@
   },
   {
     "title": "Zariadenie sociálnych služieb",
-    "slug": "Zariadenie_soci_lnych_slu_ieb",
+    "slug": "zariadenie-socialnych-sluzieb",
     "images": [
       "/projects/Zariadenie_soci_lnych_slu_ieb/1.jpg",
       "/projects/Zariadenie_soci_lnych_slu_ieb/1_PRIESVITNE-scaled.jpg",
@@ -61,7 +61,7 @@
   },
   {
     "title": "Rekonštrukcia vstupu",
-    "slug": "Rekon_trukcia_vstupu",
+    "slug": "rekonstrukcia-vstupu",
     "images": [
       "/projects/Rekon_trukcia_vstupu/1.jpg",
       "/projects/Rekon_trukcia_vstupu/31-scaled.jpg",
@@ -71,7 +71,7 @@
   },
   {
     "title": "ZUŠ Sklenárova",
-    "slug": "ZU__Sklen_rova",
+    "slug": "zus-sklenarova",
     "images": [
       "/projects/ZU__Sklen_rova/1.jpg",
       "/projects/ZU__Sklen_rova/ZUS1-scaled.jpg",
@@ -84,7 +84,7 @@
   },
   {
     "title": "Bytové domy Rača",
-    "slug": "Bytov__domy_Ra_a",
+    "slug": "bytove-domy-raca",
     "images": [
       "/projects/Bytov__domy_Ra_a/1.jpg",
       "/projects/Bytov__domy_Ra_a/WEB-001-scaled.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "title": "Rekonštrukcia meštianskeho domu",
-    "slug": "Rekon_trukcia_me_tianskeho_domu",
+    "slug": "rekonstrukcia-mestianskeho-domu",
     "images": [
       "/projects/Rekon_trukcia_me_tianskeho_domu/1.jpg",
       "/projects/Rekon_trukcia_me_tianskeho_domu/BS-082015-185-scaled.jpg",
@@ -108,7 +108,7 @@
   },
   {
     "title": "SPP rekonštrukcia zasadačky",
-    "slug": "SPP_rekon_trukcia_zasada_ky",
+    "slug": "spp-rekonstrukcia-zasadacky",
     "images": [
       "/projects/SPP_rekon_trukcia_zasada_ky/1.jpg",
       "/projects/SPP_rekon_trukcia_zasada_ky/f1-scaled.jpg",
@@ -118,7 +118,7 @@
   },
   {
     "title": "Penzión Klinger",
-    "slug": "Penzi_n_Klinger",
+    "slug": "penzion-klinger",
     "images": [
       "/projects/Penzi_n_Klinger/1.jpg",
       "/projects/Penzi_n_Klinger/WEB-033-scaled.jpg",
@@ -128,7 +128,7 @@
   },
   {
     "title": "SPP rekonštrukcia kancelárii",
-    "slug": "SPP_rekon_trukcia_kancel_rii",
+    "slug": "spp-rekonstrukcia-kancelarii",
     "images": [
       "/projects/SPP_rekon_trukcia_kancel_rii/1.png",
       "/projects/SPP_rekon_trukcia_kancel_rii/2.png",
@@ -139,7 +139,7 @@
   },
   {
     "title": "Rekonštrukcia objektu SPP",
-    "slug": "Rekon_trukcia_objektu_SPP",
+    "slug": "rekonstrukcia-objektu-spp",
     "images": [
       "/projects/Rekon_trukcia_objektu_SPP/1.jpg",
       "/projects/Rekon_trukcia_objektu_SPP/IMG_1830-scaled.jpg",
@@ -151,7 +151,7 @@
   },
   {
     "title": "Bytové domy Búdková",
-    "slug": "Bytov__domy_B_dkov_",
+    "slug": "bytove-domy-budkova",
     "images": [
       "/projects/Bytov__domy_B_dkov_/04FINAL_LI-scaled.jpg",
       "/projects/Bytov__domy_B_dkov_/05FINAL_LI-scaled.jpg",
@@ -165,7 +165,7 @@
   },
   {
     "title": "Chata Senecké jazerá",
-    "slug": "Chata_Seneck__jazer_",
+    "slug": "chata-senecke-jazera",
     "images": [
       "/projects/Chata_Seneck__jazer_/1.jpg"
     ],
@@ -173,7 +173,7 @@
   },
   {
     "title": "Hotel Štrbské pleso",
-    "slug": "Hotel__trbsk__pleso",
+    "slug": "hotel-strbske-pleso",
     "images": [
       "/projects/Hotel__trbsk__pleso/1.jpg",
       "/projects/Hotel__trbsk__pleso/20141019_121145-scaled.jpg",
@@ -187,7 +187,7 @@
   },
   {
     "title": "Rekonštrukcia bytového domu Prievozská",
-    "slug": "Rekon_trukcia_bytov_ho_domu_Prievozsk_",
+    "slug": "rekonstrukcia-bytoveho-domu-prievozska",
     "images": [
       "/projects/Rekon_trukcia_bytov_ho_domu_Prievozsk_/1.jpg",
       "/projects/Rekon_trukcia_bytov_ho_domu_Prievozsk_/IMG_5316-1-scaled.jpg",
@@ -200,7 +200,7 @@
   },
   {
     "title": "Rekonštrukcia Úprkova Bratislava",
-    "slug": "Rekon_trukcia__prkova_Bratislava",
+    "slug": "rekonstrukcia-uprkova-bratislava",
     "images": [
       "/projects/Rekon_trukcia__prkova_Bratislava/02-scaled.jpg",
       "/projects/Rekon_trukcia__prkova_Bratislava/06-scaled.jpg",
@@ -212,7 +212,7 @@
   },
   {
     "title": "Bytový dom Gagarinova",
-    "slug": "Bytov__dom_Gagarinova",
+    "slug": "bytovy-dom-gagarinova",
     "images": [
       "/projects/Bytov__dom_Gagarinova/0222-scaled.jpg",
       "/projects/Bytov__dom_Gagarinova/0444-scaled.jpg",
@@ -224,7 +224,7 @@
   },
   {
     "title": "Bytový dom A1 Biely Kostol",
-    "slug": "Bytov__dom_A1_Biely_Kostol",
+    "slug": "bytovy-dom-a1-biely-kostol",
     "images": [
       "/projects/Bytov__dom_A1_Biely_Kostol/01-nebo2017-scaled.jpg",
       "/projects/Bytov__dom_A1_Biely_Kostol/1.jpg"
@@ -233,7 +233,7 @@
   },
   {
     "title": "Rodinný dom Banská Belá",
-    "slug": "Rodinn__dom_Bansk__Bel_",
+    "slug": "rodinny-dom-banska-bela",
     "images": [
       "/projects/Rodinn__dom_Bansk__Bel_/03-scaled.jpg",
       "/projects/Rodinn__dom_Bansk__Bel_/04-scaled.jpg",
@@ -243,7 +243,7 @@
   },
   {
     "title": "Rekonštrukcia Kremenisko Banská Štiavnica",
-    "slug": "Rekon_trukcia_Kremenisko_Bansk___tiavnica",
+    "slug": "rekonstrukcia-kremenisko-banska-stiavnica",
     "images": [
       "/projects/Rekon_trukcia_Kremenisko_Bansk___tiavnica/1.jpg",
       "/projects/Rekon_trukcia_Kremenisko_Bansk___tiavnica/P1050814-scaled.jpg",
@@ -256,7 +256,7 @@
   },
   {
     "title": "Bytový dom Smolnícka",
-    "slug": "Bytov__dom_Smoln_cka",
+    "slug": "bytovy-dom-smolnicka",
     "images": [
       "/projects/Bytov__dom_Smoln_cka/1.jpg",
       "/projects/Bytov__dom_Smoln_cka/a-final-scaled.jpg",

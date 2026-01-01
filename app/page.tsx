@@ -21,6 +21,7 @@ export default function Home() {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full">
+      <h1 className="sr-only">Atelier Kusa - Architektonický ateliér v Bratislave</h1>
       <HeroSlider slides={slides} />
     </div>
   );
