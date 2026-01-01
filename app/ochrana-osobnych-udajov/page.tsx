@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-3xl p-8 md:p-12 lg:p-16">
+    <div className="max-w-3xl p-4 md:p-12 lg:p-16">
       <Link
         href="/kontakt"
         className="text-xs uppercase tracking-widest text-gray-400 hover:text-black transition-colors mb-8 block"

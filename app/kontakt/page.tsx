@@ -3,26 +3,26 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="flex flex-col md:flex-row min-h-[calc(100vh-4rem)]">
-      <div className="w-full md:w-1/3 p-8 md:p-12 lg:p-16">
+      <div className="w-full md:w-1/3 p-4 md:p-12 lg:p-16">
         <h1 className="text-3xl font-light mb-12 uppercase tracking-widest">Kontakt</h1>
 
         <div className="space-y-8 text-base font-light">
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-400">Fakturačná adresa a údaje</h2>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-black">Fakturačná adresa a údaje</h2>
             <p className="font-medium">ATELIÉR KUSÁ, s.r.o.</p>
             <p>Prievozská 37,</p>
             <p>821 09 Bratislava</p>
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-400">Sídlo kancelárie</h2>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-black">Sídlo kancelárie</h2>
             <p className="font-medium">ATELIÉR KUSÁ, s.r.o.</p>
             <p>Partizánska 2,</p>
             <p>811 03 Bratislava</p>
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-400">Kontakt</h2>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-black">Kontakt</h2>
             <p>
               <a href="tel:+421905227307" className="hover:underline">+421 905 227 307</a>
             </p>
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-gray-400">Firemné údaje</h2>
+            <h2 className="text-sm font-bold uppercase tracking-widest mb-3 text-black">Firemné údaje</h2>
             <p>IČO: 36656691</p>
             <p>IČ DPH: SK2022217637</p>
           </div>

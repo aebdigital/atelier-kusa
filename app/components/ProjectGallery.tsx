@@ -120,19 +120,19 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-[5px] p-[5px]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-[5px] p-[5px]">
         {images.map((img: string, index: number) => {
           const gridStyle = getGridStyle(index);
 
           return (
             <div
               key={index}
-              className="relative cursor-pointer overflow-hidden group"
+              className="relative cursor-pointer overflow-hidden group gallery-item"
               style={{
-                gridColumn: gridStyle.gridColumn,
-                gridRow: gridStyle.gridRow,
+                "--grid-col": gridStyle.gridColumn,
+                "--grid-row": gridStyle.gridRow,
                 aspectRatio: "1 / 1"
-              }}
+              } as React.CSSProperties}
               onClick={() => openLightbox(index)}
             >
               <img

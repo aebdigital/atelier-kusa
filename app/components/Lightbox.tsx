@@ -65,7 +65,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-white/90 backdrop-blur-xl"
+            className="absolute inset-0 bg-black/90 backdrop-blur-xl"
           />
 
           {/* Close button */}
@@ -75,7 +75,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ delay: 0.1 }}
             onClick={onClose}
-            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-10"
+            className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
             aria-label="Close lightbox"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -94,7 +94,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
               e.stopPropagation();
               goPrev();
             }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-10"
+            className="absolute left-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
             aria-label="Previous image"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -112,7 +112,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
               e.stopPropagation();
               goNext();
             }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-10"
+            className="absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
             aria-label="Next image"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -144,7 +144,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-gray-600 font-medium"
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-gray-300 font-medium"
           >
             {currentIndex + 1} / {images.length}
           </motion.div>

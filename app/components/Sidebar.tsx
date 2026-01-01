@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useCookieSettings } from "./CookieConsent";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const { openSettings } = useCookieSettings();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -53,11 +57,11 @@ export default function Sidebar() {
 
       {/* Mobile Slide-out Menu */}
       <aside
-        className={`md:hidden fixed top-16 right-0 h-[calc(100vh-4rem)] w-64 bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed top-16 right-0 h-[calc(100vh-4rem)] w-64 bg-white z-50 transform transition-transform duration-300 ease-in-out flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <nav className="p-8">
+        <nav className="p-8 flex-1">
           <ul className="space-y-6 text-sm font-medium uppercase tracking-wide">
             <li>
               <Link
@@ -88,6 +92,18 @@ export default function Sidebar() {
             </li>
           </ul>
         </nav>
+
+        <div className="p-8 text-xs text-gray-400">
+           <button 
+             onClick={() => {
+               closeMenu();
+               openSettings();
+             }}
+             className="hover:text-black transition-colors underline mb-4 block text-left"
+           >
+             Nastavenia cookies
+           </button>
+        </div>
       </aside>
 
       {/* Desktop Sidebar */}
@@ -104,17 +120,38 @@ export default function Sidebar() {
         <nav className="flex-1">
           <ul className="space-y-4 text-sm font-medium uppercase tracking-wide">
             <li>
-              <Link href="/" className="hover:text-gray-500 transition-colors">
+              <Link 
+                href="/" 
+                className={`block hover:text-gray-500 transition-all duration-300 ${
+                  pathname === "/" 
+                    ? "border-l-2 border-black pl-3" 
+                    : ""
+                }`}
+              >
                 Domov
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-gray-500 transition-colors">
+              <Link 
+                href="/projects" 
+                className={`block hover:text-gray-500 transition-all duration-300 ${
+                  pathname.startsWith("/projects") 
+                    ? "border-l-2 border-black pl-3" 
+                    : ""
+                }`}
+              >
                 Projekty
               </Link>
             </li>
             <li>
-              <Link href="/kontakt" className="hover:text-gray-500 transition-colors">
+              <Link 
+                href="/kontakt" 
+                className={`block hover:text-gray-500 transition-all duration-300 ${
+                  pathname === "/kontakt" 
+                    ? "border-l-2 border-black pl-3" 
+                    : ""
+                }`}
+              >
                 Kontakt
               </Link>
             </li>
@@ -123,6 +160,15 @@ export default function Sidebar() {
 
         <div className="text-xs text-gray-400 mt-auto">
           <p>&copy; {new Date().getFullYear()} Ateliér Kusá</p>
+          <a href="https://aebdigital.sk" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors block mt-1">
+            Tvorba web - AEB Digital
+          </a>
+          <button 
+             onClick={openSettings}
+             className="hover:text-black transition-colors underline block mt-2 text-left"
+           >
+             Nastavenia cookies
+           </button>
         </div>
       </aside>
     </>

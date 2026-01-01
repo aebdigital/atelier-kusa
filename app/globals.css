@@ -10,3 +10,15 @@ body {
   font-family: var(--font-montserrat);
   @apply bg-white text-gray-800;
 }
+
+.gallery-item {
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+@media (min-width: 768px) {
+  .gallery-item {
+    grid-column: var(--grid-col) !important;
+    grid-row: var(--grid-row) !important;
+  }
+}

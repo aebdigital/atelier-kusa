@@ -12,13 +12,13 @@ export default function Projects() {
   const projects = getProjects();
 
   return (
-    <div className="p-8 md:p-12 lg:p-16">
+    <div className="p-4 md:p-12 lg:p-16">
       <h1 className="text-3xl font-light mb-12 uppercase tracking-widest">Projekty</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[5px]">
         {projects.map((project: any) => (
           <Link href={`/projects/${project.slug}`} key={project.slug} className="group block">
-            <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+            <div className="relative aspect-square overflow-hidden bg-gray-100">
                {project.thumbnail ? (
                 <img
                   src={project.thumbnail}
