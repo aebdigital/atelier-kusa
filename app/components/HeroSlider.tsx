@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 interface Slide {
@@ -33,10 +34,13 @@ export default function HeroSlider({ slides }: HeroSliderProps) {
             index === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
+          <Image
             src={slide.image}
             alt={slide.title}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            priority={index === 0}
+            sizes="100vw"
           />
         </div>
       ))}

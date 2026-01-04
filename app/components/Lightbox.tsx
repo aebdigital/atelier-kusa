@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface LightboxProps {
@@ -85,7 +86,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
           </motion.button>
 
           {/* Image container with navigation */}
-          <div className="relative flex items-center justify-center w-[95%] md:w-full h-full md:px-24">
+          <div className="relative flex items-center justify-center w-[95%] md:w-full h-full md:px-24 pointer-events-none">
             {/* Previous button */}
             <motion.button
               initial={{ opacity: 0, x: -20 }}
@@ -96,7 +97,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
                 e.stopPropagation();
                 goPrev();
               }}
-              className="absolute left-2 md:left-6 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors z-20"
+              className="absolute left-2 md:left-6 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors z-20 pointer-events-auto"
               aria-label="Previous image"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -112,13 +113,16 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative max-w-full max-h-[80vh] z-10"
+                className="relative w-full h-[80vh] z-10 pointer-events-auto"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img
+                <Image
                   src={images[currentIndex]}
                   alt={`${title} ${currentIndex + 1}`}
-                  className="max-w-full max-h-[80vh] object-contain"
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                  priority
                 />
               </motion.div>
             </AnimatePresence>
@@ -133,7 +137,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose, title 
                 e.stopPropagation();
                 goNext();
               }}
-              className="absolute right-2 md:right-6 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors z-20"
+              className="absolute right-2 md:right-6 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors z-20 pointer-events-auto"
               aria-label="Next image"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

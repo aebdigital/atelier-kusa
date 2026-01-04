@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCookieSettings } from "./CookieConsent";
 
@@ -18,7 +19,7 @@ export default function Sidebar() {
       {/* Mobile Header */}
       <header className="md:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-100 z-50 flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
-          <img src="/logo.jpg" alt="Atelier Kusa Logo" className="w-10 h-auto" />
+          <Image src="/logo.jpg" alt="Atelier Kusa Logo" width={40} height={40} className="w-10 h-auto" />
           <span className="text-lg font-bold tracking-widest uppercase">
             Ateliér Kusá
           </span>
@@ -110,7 +111,7 @@ export default function Sidebar() {
       <aside className="hidden md:flex fixed left-0 top-0 h-full w-64 bg-white p-8 flex-col border-r border-gray-100 z-50">
         <div className="mb-12">
           <Link href="/" className="block">
-            <img src="/logo.jpg" alt="Atelier Kusa Logo" className="w-16 h-auto mb-4" />
+            <Image src="/logo.jpg" alt="Atelier Kusa Logo" width={64} height={64} className="w-16 h-auto mb-4" />
             <span className="text-xl font-bold tracking-widest uppercase block">
               Ateliér Kusá
             </span>

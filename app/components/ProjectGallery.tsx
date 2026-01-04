@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Lightbox from "./Lightbox";
 
 interface ProjectGalleryProps {
@@ -128,11 +129,14 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
             className="relative cursor-pointer overflow-hidden group"
             onClick={() => openLightbox(index)}
           >
-            <img
+            <Image
               src={img}
               alt={`${title} ${index + 1}`}
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
+              width={1200}
+              height={800}
+              style={{ width: "100%", height: "auto" }}
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
           </div>
@@ -155,11 +159,12 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
               } as React.CSSProperties}
               onClick={() => openLightbox(index)}
             >
-              <img
+              <Image
                 src={img}
                 alt={`${title} ${index + 1}`}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
             </div>

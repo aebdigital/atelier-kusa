@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import fs from "fs";
 import path from "path";
 
@@ -20,11 +21,12 @@ export default function Projects() {
           <Link href={`/projekty/${project.slug}`} key={project.slug} className="group block">
             <div className="relative aspect-square overflow-hidden bg-gray-100">
                {project.thumbnail ? (
-                <img
+                <Image
                   src={project.thumbnail}
                   alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-300">No Image</div>
